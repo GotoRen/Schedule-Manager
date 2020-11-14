@@ -12,7 +12,7 @@ class FetchData {
             // DB接続
             $DBConnecter = new DBConnecter();
         
-            $sql = "SELECT * FROM schedule WHERE user_id = $user_id"; // ユーザIDを元にデータを取得
+            $sql = "SELECT * FROM schedule WHERE user_id = $user_id ORDER BY begin ASC"; // ユーザIDを元にデータを取得
             $stmt = $DBConnecter->pdo->prepare($sql);
             $stmt->execute();
         
@@ -33,7 +33,7 @@ class FetchData {
             // DB接続
             $DBConnecter = new DBConnecter();
 
-            $sql = "SELECT * FROM schedule WHERE user_id = $user_id AND DATE_FORMAT(begin, '%m') = $month";
+            $sql = "SELECT * FROM schedule WHERE user_id = $user_id AND DATE_FORMAT(begin, '%m') = $month ORDER BY begin ASC";
             $stmt = $DBConnecter->pdo->prepare($sql);
             $stmt->execute();
         
@@ -54,7 +54,7 @@ class FetchData {
             // DB接続
             $DBConnecter = new DBConnecter();
 
-            $sql = "SELECT * FROM schedule WHERE user_id = $user_id AND begin <= (NOW() + INTERVAL 7 DAY) AND begin >= (NOW() - INTERVAL 7 DAY)";
+            $sql = "SELECT * FROM schedule WHERE user_id = $user_id AND begin > NOW() AND begin < DATE_ADD(NOW(), INTERVAL 7 DAY) ORDER BY begin ASC";
             $stmt = $DBConnecter->pdo->prepare($sql);
             $stmt->execute();
         
