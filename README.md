@@ -27,7 +27,7 @@
     - ユーザ：root
     - パスワード：password
   - データベース
-    - `create database schedule_db`;
+    - `> create database schedule_db character set utf8 collate utf8_general_ci;`
   - テーブル
     - ユーザ管理テーブル
       ```sql
