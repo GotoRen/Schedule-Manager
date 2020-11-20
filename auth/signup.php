@@ -47,7 +47,7 @@ $signUpMessage = "";
                         $stmt->execute(array($user_name, password_hash($user_pass, PASSWORD_DEFAULT)));  // パスワードのハッシュ化を行う（今回は文字列のみなのでbindValue(変数の内容が変わらない)を使用せず、直接excuteに渡しても問題ない）
                         $user_id = $DBConnecter->pdo->lastinsertid();  // 登録した(DB側でauto_incrementした)IDを$user_idに入れる
                         
-                        header("Location: signup_compolete.php", true, 301);
+                        header("Location: signup_completed.php", true, 301);
                         exit();
                     }
                 } catch(PDOException $Exception) {
