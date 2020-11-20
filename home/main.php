@@ -58,7 +58,7 @@ $user_id = $_SESSION["USER_ID"];
                         <button type="submit" name="getdata" class="btn btn-outline-primary" value="month">月ごと</button>
                     </form>
                 </div>
-                <button class="btn btn-primary p-3" onclick="location.href='form.php'">スケージュルを追加</button>
+                <button class="btn btn-primary p-3" onclick="location.href='form.php'">スケジュールを追加</button>
             </h2>
               
             <div class="container-fluid">
