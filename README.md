@@ -1,8 +1,8 @@
 # Schedule-Manager
-## Name
+## ✏️ Name
 <img alt="タイトル" width="700" src="https://raw.github.com/wiki/GotoRen/Schedule-Manager/images/title.png" />
 
-## Overview
+## 💡 Overview
 - 2020後期 Webプログラミング及び演習 自由課題 としてスケジュール管理アプリを制作
 - ユーザ登録とスケジュール登録を行うことができる
   - ユーザはサインアップまたはサインインによりサービスを利用  
@@ -16,7 +16,7 @@
   - ログインした状態で画面を閉じた場合、再度画面を開くとログインした状態から
   - ログアウトした状態で画面を閉じた場合、再度画面を開くとログイン項目の入力を要求
 
-## Description
+## 📝 Description
 - 環境
   - XAMPP（MAMP） + Apache Web Server + MariaDB（MySQL）
   - WHOAMI：`localhost`
